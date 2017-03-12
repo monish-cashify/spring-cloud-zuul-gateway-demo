@@ -4,11 +4,11 @@ spring.profiles.active: development
 app.name: spring-cloud-zuul-gateway-demo
 app.description: a spring-cloud + zuul demo app
 
-server.port: 8651
+server.port: 8652
 server.use-forward-headers: true
 server.compression.enabled: true
 
-management.port: 9651
+management.port: 9652
 management.context-path: /
 
 endpoints.jmx.domain: spring-cloud-zuul-gateway-demo
