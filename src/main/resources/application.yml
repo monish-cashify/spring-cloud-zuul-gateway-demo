@@ -27,12 +27,12 @@ eureka:
 
 zuul:
   routes:
-    erueka:
+    eureka:
       path: /eureka/**
       url: http://localhost:8761
-    orf:
-      path: /orf/**
-      url: http://orf.at
+    app:
+      path: /app/**
+      url: http://localhost:8080
 
 
 #spring.boot.admin.url: http://localhost:9080
