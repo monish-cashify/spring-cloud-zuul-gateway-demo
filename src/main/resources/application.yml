@@ -1,0 +1,44 @@
+spring.application.name: 'spring-cloud-zuul-gateway-demo'
+spring.profiles.active: production
+
+app.name: spring-cloud-zuul-gateway-demo
+app.description: a spring-cloud + zuul demo app
+
+server.port: 8651
+server.use-forward-headers: true
+server.compression.enabled: true
+
+endpoints.jmx.domain: spring-cloud-zuul-gateway-demo
+endpoints.jmx.unique-names: true
+
+management.port: 9651
+management.context-path: /
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    healthcheck:
+      enabled: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    erueka:
+      path: /eureka/**
+      url: http://localhost:8761
+    orf:
+      path: /orf/**
+      url: http://orf.at
+
+
+#spring.boot.admin.url: http://localhost:9080
+
+# LOGGING
+logging.path: ./var/log
+logging.file: application.log
+logging.config: classpath:logback.xml
+logging.level.org.springframework: INFO

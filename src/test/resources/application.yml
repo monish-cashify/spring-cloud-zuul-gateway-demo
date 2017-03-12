@@ -1,0 +1,11 @@
+spring.application.name: 'spring-cloud-zuul-gateway-demo'
+spring.profiles.active: test
+
+app.name: spring-cloud-zuul-gateway-demo
+app.description: a spring-cloud + zuul demo app
+
+server.use-forward-headers: false
+server.compression.enabled: false
+
+endpoints.jmx.domain: spring-cloud-zuul-gateway-demo
+endpoints.jmx.unique-names: true
